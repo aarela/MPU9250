@@ -51,7 +51,7 @@ int MPU9250::begin(){
     _spi->begin();
   } else { // using I2C for communication
     // starting the I2C bus
-    _i2c->begin();
+    _i2c->begin(0,2);
     // setting the I2C clock
     _i2c->setClock(_i2cRate);
   }
